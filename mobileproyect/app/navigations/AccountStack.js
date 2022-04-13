@@ -14,18 +14,18 @@ export default function AccountStack() {
                     
                     name='account'
                     component={Account}
-                    options={{title:'CUENTAS'}}
+                    options={{title:'Cuenta'}}
                     
                     />
                   <Stack.Screen
                       name='login'
                       component={Login}
-                      options={{title:"INICIAR SESIÓN "}}  //aqui se cambia el de cuentas la parte de arriba//
+                      options={{title:"inicie sesion"}}
                   />
                   <Stack.Screen
                       name='register'
                       component={Register}
-                      options={{title:"REGISTRARSE"}}
+                      options={{title:"REGISTRARSE "}}
                   />
  
 

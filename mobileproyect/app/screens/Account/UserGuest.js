@@ -10,14 +10,14 @@ export default function UserGuest(){
             <Image 
             
             style={styles.stretch}
-            source={require("../../../assets/segundo.jpeg")}
+            source={require("../../../assets/img/ITESCO-1-e1532924671960-1200x350-c-default.jpg")}
             />
-            <Text style={styles.title}>ÚNETE AL ITESCO</Text> 
-            <Text style={styles.description}>Instituto Tecnológico Superior de Coatzacoalcos</Text>
+            <Text style={styles.title}>Ingresa al ITESCO</Text> 
+            <Text style={styles.description}>busca y visualiza las opciones de restaurantes en la ciudad</Text>
 
             <View style={styles.viewBtn}>
             <Button
-            title="INICIAR SESIÓN"
+            title="ver tu perfil"
             buttonStyle={styles.btnStyle}
             containerStyle={styles.btnContainer}
             onPress={()=>navigation.navigate("login")}
@@ -39,18 +39,15 @@ const styles = StyleSheet.create({
     stretch:{
         width:"100%",
         height: 300,
-        resizeMode: "cover",
-        marginBottom: 40,
-        borderRadius:25
+        resizeMode: "contain",
+        marginBottom: 40
        
     },
     title:{
         fontWeight: "bold",
         fontSize: 19,
         marginBottom:10,
-        textAlign:"center",
-        borderRadius:25,
-        backgroundColor:"#00d1ff"
+        textAlign:"center"
     },
     description:{
         marginBottom: 20,
@@ -61,12 +58,10 @@ const styles = StyleSheet.create({
         alignItems:"center"
     },
     btnStyle:{
-        backgroundColor:"#005366",
-       
+        backgroundColor:"#00a680"
     },
     btnContainer:{
-        width: "70%",
-        
+        width: "70%"
     }
 
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+
 import RestaurantsStack from "./RestaurantsStack";
 import AccountStack from "./AccountStack";
 import FavoritesStack from "./FavoritesStack";
@@ -26,7 +27,7 @@ export default function Navigation() {
           initialRouteName="restaurants"
           tabBarOptions={{
               inactiveTintColor: '#646464',
-              activeTintColor: '#00d1ff'
+              activeTintColor: '#1EB5EB'
           }}
           screenOptions={({route}) => ({
               tabBarIcon:({color}) =>screenOptions(route, color)
@@ -37,7 +38,7 @@ export default function Navigation() {
                   <Tab.Screen 
                   name= 'restaurants' 
                   component={RestaurantsStack}
-                  options={{title:"INICIO"}}               //cambiar nombre menu de abajo//
+                  options={{title:"INICIO"}} 
                   />
                   
                   <Tab.Screen 
@@ -49,7 +50,7 @@ export default function Navigation() {
                   <Tab.Screen 
                   name= 'account' 
                   component={AccountStack}
-                  options={{title:"Cuenta"}} 
+                  options={{title:"SESIÓN"}} 
                   />
 
                   <Tab.Screen 
@@ -97,7 +98,7 @@ function screenOptions(route, color) {
     }
     
     return(
-        <Icon type='material-community' name={iconName} size={30} color={color}/>
+        <Icon type='material-community' name={iconName} size={22} color={color}/>
     ) 
 
 }
