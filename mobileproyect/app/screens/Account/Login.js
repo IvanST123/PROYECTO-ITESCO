@@ -1,75 +1,79 @@
-import React from "react"
-import { StyleSheet, View, ScrollView, Text, Image } from "react-native"
-import { Divider } from "react-native-elements"
-import { useNavigation } from "@react-navigation/native"
+import React, {useRef} from 'react'
+import { StyleSheet, View, ScrollView, Text, Image } from 'react-native'
+import { Divider } from 'react-native-elements'
+import { useNavigation } from '@react-navigation/native'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import LoginForm from '../../components/Account/LoginForm'
+import Toast from 'react-native-toast-message'
+
 
 export default function Login(){
+    const toastRef = useRef()
     return(
-    <ScrollView >
+    
+        <KeyboardAwareScrollView>
         <Image
-            source={require("../../../assets/tres.png")}
-            resizeMode="contain"
-            style={styles.logo}
+        source={require('../../../assets/pngwing.com.png')}
+        resizeMode='contain'
+        style={styles.logo}
         />
-        <View style={styles.viewContainer}> 
-        <p> <Text>INICIAR SESIÓN</Text></p>
-         <CreateAccount/>
-
+        <View style={styles.viewContainer}>
+            <Text>INVITADO</Text>
+            <LoginForm toastRef={toastRef}/>
+            <CreateAccount/>
         </View>
-
-        <Divider style={styles.divider}/>
-          
-       
-
-    </ScrollView>
- )
+        <Toast ref={toastRef}/>
+        <Divider  style={styles.divider}/>
+    
+        </KeyboardAwareScrollView>
+    )
 }
 
 function CreateAccount(){
     const navigation = useNavigation()
     return(
-        <Text style = {styles.textRegister}>
-         ¿Nuevo ingreso? {" "}
-            <Text
-              style = {styles.linkRegister}
-              onPress={()=>navigation.navigate("register")}
-            ><br/>
-               Haz click aquí  
-            </Text>
-        </Text>
-
+        <Text style = {styles.textRegister}><strong> 
+            ¿Aún no tienes cuenta? {''}
+            </strong><Text
+                style = {styles.linkRegister}
+                onPress={()=> navigation.navigate('register')}
+            ><p>
+             REGÍSTRATE 
+             </p></Text>
+        </Text> 
     )
-    
 }
 
 const styles = StyleSheet.create({
     logo:{
-        width:"100%",
-        height: 300,
-        marginTop:20
+        width:'100%',
+        height: 200,
+        marginTop: 20
     },
     viewContainer:{
         marginRight:40,
-        marginLeft:40,
-        textAlign:"center",
-        fontWeight: "bold"
-
+        marginLeft: 40,
+        borderColor:"#7AFAEE",
+        textAlign:"center"
 
     },
     divider:{
-        backgroundColor:"#00a680",
+        backgroundColor: '#3FBDDF',
         margin: 40
 
     },
     textRegister:{
         marginTop: 15,
         marginLeft:10,
-        marginRight: 10
+        marginRight: 10,
+        borderColor:"#7AFAEE"
+        
+
     },
     linkRegister:{
-        color: "#00a580",
-        fontWeight: "bold"
+        color: '#3FBDDF',
+        fontWeight: 'bold',
+       
 
     }
-
 })
