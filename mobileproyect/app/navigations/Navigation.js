@@ -56,7 +56,7 @@ export default function Navigation() {
                   <Tab.Screen 
                   name= 'search' 
                   component={SearchStack}
-                  options={{title:"Buscar"}} 
+                  options={{title:"NOTICIAS"}} 
                   />
 
                   <Tab.Screen 
@@ -88,7 +88,7 @@ function screenOptions(route, color) {
             iconName='star-outline'
             break
         case 'search':
-            iconName='magnify'
+            iconName='newspaper-variant-outline'
             break
         case'account':
             iconName='account-check-outline'

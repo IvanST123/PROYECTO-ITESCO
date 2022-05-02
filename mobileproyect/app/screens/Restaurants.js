@@ -11,7 +11,7 @@ export default function Restaurants() {
     <Image 
     
     style={styles.stretch}
-    source={require("../../assets/tres.png")}
+    source={require("../../assets/img/tres.png")}
     />
     <Text style={styles.title}>INFORMÁTICA</Text> 
     <Text style={styles.title2}>OBJETIVO GENERAL</Text> 

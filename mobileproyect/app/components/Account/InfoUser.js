@@ -90,7 +90,7 @@ export default function InfoUser(props){
                 onPress={changeAvatar}
                 containerStyle={styles.userInfoAvatar}
                 source={
-                    photoURL ? {uri:photoURL} : require ('../../../assets/Img/avatar-default.jpg')
+                    photoURL ? {uri:photoURL} : require ('../../../assets/img/avatar-default.jpg')
                 }
             />
             <View>
