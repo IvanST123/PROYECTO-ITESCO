@@ -1,7 +1,7 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
-import Search from '../screens/Search'
-
+import Search from '../screens/Restaurants/Search'
+import AddSearch from '../screens/Restaurants/AddSearch'
 const Stack = createStackNavigator() 
 
 export default function SearchStack() {
@@ -12,7 +12,14 @@ export default function SearchStack() {
                     
                     name='search'
                     component={Search}
-                    options={{title:'Busqueda'}}
+                    options={{title:'NOTICIAS CORTAS'}}
+                    
+                    />
+                   <Stack.Screen
+                    
+                    name='addsearch'
+                    component={AddSearch}
+                    options={{title:'NOTICIAS CORTAS'}}
                     
                     />
 
